@@ -38,6 +38,12 @@ for char in range(1, nr_numbers+1):
 
 print(password_list)
 
+random.shuffle(password_list)
+print("Randomly shuffles the all numbers, chars and letters!!")
+
+print("After the shuffle ")
+print(password_list)
+
 password = ""
 for item in password_list:
     password += item
