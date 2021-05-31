@@ -13,10 +13,15 @@ for item in range(len(chosen_word)):
 
 print(blank)
 
-guess_letter = input("Guess a litter in a chosen word :").lower()
+chk = False
 
-for position in range(len(chosen_word)):
-    letter = chosen_word[position]
-    if letter == guess_letter:
-        blank[position] = letter
-print(blank)
+while not chk:
+    guess_letter = input("Guess a litter in a chosen word :").lower()
+    for position in range(len(chosen_word)):
+        letter = chosen_word[position]
+        if letter == guess_letter:
+            blank[position] = letter
+    print(blank)
+    if '_' not in blank:
+        chk = True
+        print("You Win!")
