@@ -17,6 +17,20 @@ def encrypt(plain_text, shift_amount):
         new_letter = alphabet[new_position]
         cipher_text += new_letter
     print(cipher_text)
+    return cipher_text
 
 
-encrypt(plain_text=text, shift_amount=shift)
+decode_text= encrypt(plain_text=text, shift_amount=shift)
+
+def dencrypt(plain_text, shift_amount):
+    cipher_text = ""
+    for letter in plain_text:
+        position = alphabet.index(letter)
+        new_position = position - shift_amount
+        new_letter = alphabet[new_position]
+        cipher_text += new_letter
+    print(cipher_text)
+    return cipher_text
+ab_text = dencrypt(plain_text=decode_text, shift_amount=shift)
+
+encode_text = encrypt(plain_text=ab_text, shift_amount=shift)
