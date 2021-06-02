@@ -1,3 +1,5 @@
+#Finding the highes bidder in blind auction
+
 bids = {}
 bidding_finished = False
 
