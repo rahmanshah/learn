@@ -31,3 +31,8 @@ for symbol in operations:
 
 operations_symbol = input("Pick an operations from the line above:")
 
+operations_function = operations[operations_symbol]
+answer = operations_function(num1,num2)
+
+print(f"{num1} {operations_symbol} {num2} = {answer}")
+
