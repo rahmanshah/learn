@@ -24,12 +24,13 @@ operations = {
 }
 
 num1 = int(input("What's the first number:"))
-num2 = int(input("What's the second number:"))
 
 for symbol in operations:
     print(symbol)
 
 operations_symbol = input("Pick an operations from the line above:")
+
+num2 = int(input("What's the second number:"))
 
 operations_function = operations[operations_symbol]
 answer = operations_function(num1,num2)
