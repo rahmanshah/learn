@@ -15,3 +15,10 @@ def multiply(n1,n2):
 def divide(n1, n2):
     """ This function will return division"""
     return n1 / n2
+
+operations = {
+    '+': add,
+    '-': subtract,
+    '*': multiply,
+    '/': divide
+}
