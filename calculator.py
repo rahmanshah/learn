@@ -29,5 +29,5 @@ num2 = int(input("What's the second number:"))
 for symbol in operations:
     print(symbol)
 
-
+operations_symbol = input("Pick an operations from the line above:")
 
