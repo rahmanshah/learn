@@ -47,6 +47,22 @@ def calculate_score(cards):
         cards.append(1)
     return sum(cards)
 
+def compare(user_score, computer_score):
+    if user_score == computer_score:
+        return "Draw"
+    elif computer_score == 0:
+        return "Computer has balckjack"
+    elif user_score == 0:
+        return "User has blackjack"
+    elif computer_score > 21:
+        return "Computer lose as cards went over 21"
+    elif user_score > 21:
+        return "User lose as card went over 21"
+    elif user_score > computer_score :
+        return "User wins"
+    else:
+        return "User lose"
+
 # Hint 5: Deal the user and computer 2 cards each using deal_card() and append().
 user_cards = []
 computer_cards = []
@@ -55,7 +71,8 @@ for _ in range(2):
     user_cards.append(deal_card())
     computer_cards.append(deal_card())
 
-
+print(user_cards)
+print(computer_cards)
 
 # Hint 6: Create a function called calculate_score() that takes a List of cards as input
 # and returns the score.
@@ -70,6 +87,9 @@ for _ in range(2):
 # Hint 9: Call calculate_score(). If the computer or the user has a blackjack (0) or if the user's score is over 21, then the game ends.
 user_score = calculate_score(user_cards)
 computer_score = calculate_score(computer_cards)
+
+print(user_score)
+print(computer_score)
 game = False
 
 while not game:
@@ -86,6 +106,8 @@ while not game:
 while computer_score != 0 and computer_score < 17:
     computer_cards.append(deal_card())
     computer_score = calculate_score(computer_cards)
+
+compare(user_score, computer_score)
 # Hint 10: If the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards List. If no, then the game has ended.
 
 # Hint 11: The score will need to be rechecked with every new card drawn and the checks in Hint 9 need to be repeated until the game ends.
