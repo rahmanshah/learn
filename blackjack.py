@@ -56,17 +56,7 @@ for _ in range(2):
 # Look up the sum() function to help you do this.
 
 def calculate_score(cards):
-    score = 0
-    score = sum(cards)
-    if score == 21:
-        return 0
-    elif score > 21:
-        cards.remove(11)
-        cards.append(1)
-        score = sum(cards)
-        return score
-    else:
-        return score
+    return sum(cards)
 
 
 # Hint 7: Inside calculate_score() check for a blackjack (a hand with only 2 cards: ace + 10) and return 0 instead of the actual score. 0 will represent a blackjack in our game.
