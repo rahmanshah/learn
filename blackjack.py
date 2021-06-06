@@ -56,6 +56,8 @@ for _ in range(2):
 # Look up the sum() function to help you do this.
 
 def calculate_score(cards):
+    if sum(cards) == 21 and len(cards) == 2:
+        return 0
     return sum(cards)
 
 
