@@ -96,10 +96,10 @@ while not game:
     if user_score == 0 or computer_cards == 0 or user_score > 21:
         game = True
     else:
-        user_choice = input("Choose 'y' to get another card or 'n' to end the game")
-        if user_choice.lower() == 'y':
+        user_choice = input("Choose 'y' to get another card or 'n' to end the game: ")
+        if user_choice == 'y':
             user_cards.append(deal_card())
-            user_score = calculate_score(user_cards)
+            print(user_cards)
         else:
             game = True
 
