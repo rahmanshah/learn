@@ -70,12 +70,20 @@ for _ in range(2):
 # Hint 9: Call calculate_score(). If the computer or the user has a blackjack (0) or if the user's score is over 21, then the game ends.
 user_score = calculate_score(user_cards)
 computer_score = calculate_score(computer_cards)
-game = True
+game = False
 
-while game:
+while not game:
     if user_score == 0 or computer_cards == 0 or user_score > 21:
-        game = False
-    print("Game ends")
+        game = True
+    else:
+        user_choice = input("Choose 'y' to get another card or 'n' to end the game")
+        if user_choice.lower() == 'y':
+            user_cards.append(deal_card())
+            user_score = calculate_score(user_cards)
+        else:
+            game = True
+
+
 # Hint 10: If the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards List. If no, then the game has ended.
 
 # Hint 11: The score will need to be rechecked with every new card drawn and the checks in Hint 9 need to be repeated until the game ends.
